@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://poetic-madeleine-9af29d.netlify.app/sitemap.xml

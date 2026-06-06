@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Buddies Unleashed</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E61E26',
+                        secondary: '#1A1A1A',
+                        dark: '#0A0A0A',
+                        accent: '#9E9E9E',
+                    },
+                    fontFamily: {
+                        header: ['Bebas Neue', 'cursive'],
+                        body: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #0A0A0A; color: white; }
+        h1, h2, h3, .font-header { font-family: 'Bebas Neue', cursive; }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-6 relative">
+    <!-- Login Screen -->
+    <div id="loginScreen" class="absolute inset-0 bg-dark z-50 flex items-center justify-center p-6">
+        <div class="bg-secondary p-8 rounded-2xl w-full max-w-sm border border-white/10 shadow-2xl text-center">
+            <img src="./LOGO 1.jpeg" alt="Logo" class="h-24 mx-auto mb-6 rounded-full object-contain">
+            <h2 class="font-header text-4xl mb-6">ADMIN <span class="text-primary">LOGIN</span></h2>
+            <form id="loginForm" class="space-y-4">
+                <input type="password" id="passwordInput" placeholder="Enter Password" required class="w-full bg-dark border border-white/20 rounded p-3 text-white text-center focus:outline-none focus:border-primary transition-colors">
+                <p id="loginError" class="text-primary text-sm hidden">Incorrect password.</p>
+                <button type="submit" class="w-full bg-primary hover:bg-red-700 text-white font-header text-2xl py-3 rounded transition-colors tracking-widest">
+                    LOGIN
+                </button>
+            </form>
+            <div class="mt-6">
+                <a href="index.html" class="text-accent hover:text-white transition-colors text-sm"><i class="fas fa-arrow-left"></i> Back to Website</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard (Hidden initially) -->
+    <div id="adminDashboard" class="bg-secondary p-8 rounded-2xl w-full max-w-lg border border-white/10 shadow-2xl hidden">
+        <div class="text-center mb-8">
+            <h1 class="font-header text-5xl tracking-widest">CLAN <span class="text-primary">ADMIN</span></h1>
+            <p class="text-accent text-sm mt-2">Update the Upcoming Event</p>
+        </div>
+
+        <form id="eventForm" class="space-y-5">
+            <div>
+                <label class="block text-accent text-sm mb-1 uppercase tracking-wider">Event Title</label>
+                <input type="text" id="title" required placeholder="e.g. Ooty Monsoon Ride" class="w-full bg-dark border border-white/20 rounded p-3 text-white focus:outline-none focus:border-primary transition-colors">
+            </div>
+            <div>
+                <label class="block text-accent text-sm mb-1 uppercase tracking-wider">Event Date</label>
+                <input type="date" id="date" required class="w-full bg-dark border border-white/20 rounded p-3 text-white focus:outline-none focus:border-primary transition-colors">
+            </div>
+            <div>
+                <label class="block text-accent text-sm mb-1 uppercase tracking-wider">Short Description</label>
+                <textarea id="desc" required rows="3" placeholder="e.g. Join us for an epic 2-day ride through the winding hills..." class="w-full bg-dark border border-white/20 rounded p-3 text-white focus:outline-none focus:border-primary transition-colors"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-primary hover:bg-red-700 text-white font-header text-2xl py-4 rounded transition-colors tracking-widest mt-4">
+                PUBLISH EVENT
+            </button>
+            <button type="button" id="clearBtn" class="w-full bg-transparent border border-white/30 hover:border-white text-white font-header text-xl py-3 rounded transition-colors tracking-widest mt-2">
+                CLEAR / CANCEL EVENT
+            </button>
+        </form>
+
+        <div id="successMsg" class="hidden mt-6 bg-green-500/20 border border-green-500 text-green-400 p-4 rounded text-center">
+            Event successfully updated!
+        </div>
+        <div class="mt-8 text-center">
+            <a href="index.html" class="text-primary hover:underline text-sm"><i class="fas fa-arrow-left"></i> Back to Website</a>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919036807752" target="_blank" class="fixed bottom-6 right-6 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-[0_4px_14px_0_rgba(37,211,102,0.5)] hover:scale-110 transition-transform duration-300 z-[90]" aria-label="Join our WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Login Logic
+        const CORRECT_PASSWORD = "admin"; // Simple password for local admin
+        
+        // Check if already logged in via sessionStorage
+        if (sessionStorage.getItem('buddies_admin_logged_in') === 'true') {
+            document.getElementById('loginScreen').style.display = 'none';
+            document.getElementById('adminDashboard').classList.remove('hidden');
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const pass = document.getElementById('passwordInput').value;
+            if (pass === CORRECT_PASSWORD) {
+                sessionStorage.setItem('buddies_admin_logged_in', 'true');
+                document.getElementById('loginScreen').style.display = 'none';
+                document.getElementById('adminDashboard').classList.remove('hidden');
+            } else {
+                document.getElementById('loginError').classList.remove('hidden');
+            }
+        });
+
+        // Event Form Logic
+        document.getElementById('eventForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const title = document.getElementById('title').value;
+            const date = document.getElementById('date').value;
+            const desc = document.getElementById('desc').value;
+
+            const eventData = {
+                title: title,
+                date: date,
+                description: desc
+            };
+
+            try {
+                await fetch('/api/event', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(eventData)
+                });
+                
+                const msg = document.getElementById('successMsg');
+                msg.textContent = "Event successfully updated globally!";
+                msg.classList.remove('hidden', 'bg-yellow-500/20', 'border-yellow-500', 'text-yellow-400');
+                msg.className = "mt-6 bg-green-500/20 border border-green-500 text-green-400 p-4 rounded text-center";
+                setTimeout(() => msg.classList.add('hidden'), 3000);
+            } catch (err) {
+                console.error("Error saving event:", err);
+            }
+        });
+
+        document.getElementById('clearBtn').addEventListener('click', async () => {
+            try {
+                await fetch('/api/event', { method: 'DELETE' });
+                document.getElementById('eventForm').reset();
+                const msg = document.getElementById('successMsg');
+                msg.textContent = "Event cleared globally!";
+                msg.classList.remove('hidden', 'bg-green-500/20', 'border-green-500', 'text-green-400');
+                msg.className = "mt-6 bg-yellow-500/20 border border-yellow-500 text-yellow-400 p-4 rounded text-center";
+                setTimeout(() => msg.classList.add('hidden'), 3000);
+            } catch (err) {
+                console.error("Error clearing event:", err);
+            }
+        });
+
+        // Load existing event data into form if it exists
+        async function loadExistingEvent() {
+            try {
+                const res = await fetch('/api/event');
+                const data = await res.json();
+                if (data && data.title) {
+                    document.getElementById('title').value = data.title;
+                    document.getElementById('date').value = data.date;
+                    document.getElementById('desc').value = data.description;
+                }
+            } catch (e) {
+                console.error("Error loading event:", e);
+            }
+        }
+        loadExistingEvent();
+    </script>
+</body>
+</html>

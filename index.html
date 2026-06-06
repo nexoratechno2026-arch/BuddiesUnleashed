@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buddies Unleashed | Coimbatore & Bangalore Motorcycle Club</title>
+    <meta name="description" content="Join Buddies Unleashed, South India's top adventure clan. A 100+ strong motorcycle brotherhood traveling all over India. Ride safe, join us today!">
+    <meta name="keywords" content="Buddies Unleashed, all over India motorcycle club, South India bike community, adventure motorcycle clan, group rides India, safe riding brotherhood, ABC India registered club, motorcycle rides, disciplined rider group">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Buddies Unleashed Adventure Clan">
+    <meta name="theme-color" content="#0A0A0A">
+    <link rel="canonical" href="https://poetic-madeleine-9af29d.netlify.app/">
+    <link rel="icon" type="image/png" href="./LOGO 1.jpeg">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://admirable-otter-19b00a.netlify.app/">
+    <meta property="og:title" content="Buddies Unleashed Adventure Clan - South India Riding Club">
+    <meta property="og:description" content="Discover true brotherhood with Buddies Unleashed! We are a registered motorcycle riding community of 100+ riders exploring all over India with safety, discipline, and freedom. Join our next adventure.">
+    <meta property="og:image" content="https://admirable-otter-19b00a.netlify.app/assets/hero.png">
+    <meta property="og:site_name" content="Buddies Unleashed">
+    <meta property="og:locale" content="en_IN">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Buddies Unleashed | Adventure Motorcycle Clan">
+    <meta name="twitter:description" content="Join India's top motorcycle community. 100+ riders traveling all over India riding with freedom, wisdom, and safety. Join the adventure!">
+    <meta name="twitter:image" content="https://admirable-otter-19b00a.netlify.app/assets/hero.png">
+
+    <!-- Fonts: Bebas Neue for headings, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN for quick setup) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E61E26',
+                        secondary: '#1A1A1A',
+                        dark: '#0A0A0A',
+                        accent: '#E5E5E5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        header: ['Bebas Neue', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html, body { 
+            background-color: #0A0A0A; 
+            color: #ffffff; 
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        .text-glow {
+            text-shadow: 0 0 10px rgba(230, 30, 38, 0.5);
+        }
+
+        .shadow-glow {
+            box-shadow: 0 0 15px rgba(230, 30, 38, 0.4);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #E61E26 0%, #b3171d 100%);
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(230, 30, 38, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(230, 30, 38, 0.5);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            background: #1A1A1A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E61E26;
+            border-radius: 4px;
+        }
+
+        /* Hero Section Responsive Background */
+        .hero-responsive-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./assets/hero.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+        }
+
+        @media (min-width: 1024px) {
+            .hero-responsive-bg {
+                background-attachment: fixed;
+            }
+        }
+
+        .logo-glow {
+            filter: drop-shadow(0 0 8px rgba(230, 30, 38, 0.4));
+        }
+
+        @media (max-width: 640px) {
+            body { overflow-x: hidden; }
+            nav { padding-left: 1rem !important; padding-right: 1rem !important; }
+            nav a { gap: 0.5rem !important; min-width: 0; }
+            nav a img { height: 2.25rem !important; }
+            nav a span { font-size: 0.92rem !important; line-height: 1.1; letter-spacing: 0.04em !important; white-space: nowrap; }
+            
+            #home { min-height: 100svh; padding-top: 5.5rem; padding-bottom: 2rem; }
+            #home > div { width: 100%; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
+            #home h1 { font-size: 2.2rem !important; line-height: 1.1 !important; word-wrap: break-word; }
+            #home h1 span.text-primary.text-2xl { font-size: 1rem !important; letter-spacing: 0.1em !important; }
+            #home .btn-primary, #home a.border { font-size: 1.1rem !important; padding: 0.85rem 1.1rem !important; letter-spacing: 0.08em !important; white-space: normal; height: auto; }
+            
+            #about, #team, #rides, #join, #contact, #gallery { padding-top: 4.25rem !important; padding-bottom: 4.25rem !important; }
+            #about h2, #team h2, #rides h2, #gallery h2, #join h2, #contact h2 { font-size: 2.25rem !important; line-height: 1.05 !important; }
+            
+            #contact .group { align-items: flex-start !important; }
+            #contact .group p.text-xl { font-size: 1rem !important; }
+            
+            #mobileMenu { font-size: 2rem !important; gap: 1.5rem !important; }
+            #mobileMenu a { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navigation -->
+    <nav class="fixed w-full z-50 bg-dark/90 backdrop-blur-md border-b border-white/10 py-3 px-6 md:px-12 flex justify-between items-center">
+        <a href="#home" class="flex items-center gap-3 group">
+            <img src="./LOGO 1.jpeg" alt="Buddies Unleashed Logo" class="h-14 md:h-16 object-contain rounded-full shadow-[0_0_15px_rgba(230,30,38,0.3)] group-hover:shadow-[0_0_25px_rgba(230,30,38,0.6)] transition-all duration-300">
+            <span class="font-header text-3xl tracking-widest text-white hidden sm:block group-hover:text-primary transition-colors">BUDDIES<span class="text-primary group-hover:text-white transition-colors">UNLEASHED</span></span>
+        </a>
+        
+        <ul class="hidden md:flex gap-12 font-header text-xl tracking-widest">
+            <li><a href="#home" class="nav-link text-white hover:text-primary transition-colors">Home</a></li>
+            <li><a href="#about" class="nav-link text-white hover:text-primary transition-colors">The Clan</a></li>
+            <li><a href="#upcomingEventSection" class="nav-link text-white hover:text-primary transition-colors">Upcoming Rides</a></li>
+            <li><a href="#rides" class="nav-link text-white hover:text-primary transition-colors">Adventurers</a></li>
+            <li><a href="#gallery" class="nav-link text-white hover:text-primary transition-colors">Gallery</a></li>
+            <li><a href="#contact" class="nav-link text-white hover:text-primary transition-colors">Contact</a></li>
+        </ul>
+
+        <button class="md:hidden text-white text-2xl" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenu" class="fixed top-0 right-0 h-full w-3/4 max-w-sm bg-dark/95 backdrop-blur-md border-l border-white/10 z-[60] flex flex-col items-center justify-center gap-8 text-3xl font-header tracking-widest md:hidden transform translate-x-full transition-transform duration-300 ease-in-out shadow-[-10px_0_30px_rgba(0,0,0,0.8)]">
+        <button class="absolute top-6 right-6 text-white text-4xl" id="closeMenu"><i class="fas fa-times"></i></button>
+        <a href="#home" class="text-white hover:text-primary transition-colors">Home</a>
+        <a href="#about" class="text-white hover:text-primary transition-colors">The Clan</a>
+        <a href="#upcomingEventSection" class="text-white hover:text-primary transition-colors">Upcoming Rides</a>
+        <a href="#rides" class="text-white hover:text-primary transition-colors">Adventurers</a>
+        <a href="#gallery" class="text-white hover:text-primary transition-colors">Gallery</a>
+        <a href="#contact" class="text-white hover:text-primary transition-colors">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-[100svh] hero-responsive-bg flex items-center justify-center text-center px-6 relative overflow-hidden pt-24 md:pt-32">
+        <div data-aos="zoom-out" data-aos-duration="1200" class="relative z-10 w-full max-w-5xl mx-auto">
+            <img src="./LOGO 1.jpeg" alt="Buddies Unleashed motorcycle community emblem" class="h-40 md:h-56 mx-auto mb-8 rounded-full shadow-[0_0_30px_rgba(230,30,38,0.5)] object-contain border-2 border-primary/30">
+            <h1 class="font-header text-5xl md:text-8xl leading-tight mb-6 tracking-tighter text-white break-words">BUDDIES <span class="text-primary">UNLEASHED</span><br><span class="text-primary text-xl md:text-3xl tracking-widest md:tracking-[0.4em] block mt-2">THE ADVENTURE CLAN</span></h1>
+            <p class="max-w-2xl mx-auto text-white text-lg mb-10 font-light italic">"Ride with Freedom & Wisdom"</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="https://wa.me/919036807752?text=Hii%20I%20am%20Intrested" target="_blank" class="btn-primary px-10 py-4 rounded-full font-header text-2xl tracking-widest flex items-center justify-center gap-2 text-white">
+                    <i class="fab fa-whatsapp text-2xl"></i> JOIN THE COMMUNITY
+                </a>
+                <a href="#about" class="border border-white/30 text-white hover:border-primary px-10 py-4 rounded-full font-header text-2xl tracking-widest transition-all">OUR MISSION</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Event Section -->
+    <section id="upcomingEventSection" class="relative py-16 border-y border-white/10 overflow-hidden bg-dark">
+        <div class="container mx-auto px-6 text-center mb-12">
+            <h3 class="text-primary font-header text-2xl tracking-widest mb-4">JOIN THE RIDE</h3>
+            <h2 class="font-header text-white text-5xl md:text-6xl uppercase">Upcoming <span class="text-primary">Rides</span></h2>
+        </div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-center gap-8 md:items-stretch">
+                <!-- Event 1 -->
+                <div class="w-full md:w-1/2 flex flex-col items-center group">
+                    <div class="w-full aspect-[4/5] overflow-hidden rounded-3xl shadow-[0_0_30px_rgba(230,30,38,0.3)] border border-primary/30 mb-6 relative bg-dark">
+                        <img src="./assets/upcoming-event-2.jpg" alt="Mallappa Hill's Top Ride" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-primary text-white text-sm font-bold px-4 py-2 rounded-full shadow-glow z-20 animate-pulse">
+                            Last Date: 13.06.2026
+                        </div>
+                    </div>
+                    <button onclick="openEventModal('Mallappa Hill\'s Top Ride', '13.06.2026')" class="btn-primary w-full px-6 py-4 rounded-full font-header text-2xl tracking-widest text-center text-white flex items-center justify-center gap-3 transition-transform duration-300">
+                        <i class="fab fa-whatsapp"></i> REGISTER NOW
+                    </button>
+                </div>
+                <!-- Event 2 -->
+                <div class="w-full md:w-1/2 flex flex-col items-center group">
+                    <div class="w-full aspect-[4/5] overflow-hidden rounded-3xl shadow-[0_0_30px_rgba(230,30,38,0.3)] border border-primary/30 mb-6 relative bg-dark">
+                        <img src="./assets/upcoming-event-1.jpg" alt="World Motorcycle Day 2026" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-primary text-white text-sm font-bold px-4 py-2 rounded-full shadow-glow z-20 animate-pulse">
+                            Last Date: 21st June 2026
+                        </div>
+                    </div>
+                    <button onclick="openEventModal('World Motorcycle Day 2026', '21st June 2026')" class="btn-primary w-full px-6 py-4 rounded-full font-header text-2xl tracking-widest text-center text-white flex items-center justify-center gap-3 transition-transform duration-300">
+                        <i class="fab fa-whatsapp"></i> REGISTER NOW
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Quotes -->
+    <div class="bg-primary/5 border-y border-white/5 py-16">
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12 text-center">
+            <div data-aos="fade-up">
+                <i class="fas fa-users text-primary text-4xl mb-4"></i>
+                <h3 class="font-header text-white text-2xl mb-2">Building Brotherhood</h3>
+                <p class="text-white text-sm tracking-wide">Strengthening bonds on every road we take.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-shield-alt text-primary text-4xl mb-4"></i>
+                <h3 class="font-header text-white text-2xl mb-2">Safety & Discipline</h3>
+                <p class="text-white text-sm tracking-wide">Responsibility is our engine's fuel.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-globe text-primary text-4xl mb-4"></i>
+                <h3 class="font-header text-white text-2xl mb-2">Adventure Clan</h3>
+                <p class="text-white text-sm tracking-wide">Exploring the world, one ride at a time.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 px-6 md:px-12 bg-dark">
+        <div class="container mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <h3 class="text-primary font-header text-2xl tracking-widest mb-4">THE ADVENTURE CLAN</h3>
+                <h2 class="font-header text-white text-5xl md:text-6xl mb-8 leading-tight">MOTORCYCLE RIDING <span class="text-primary">COMMUNITY</span></h2>
+                <div class="space-y-6 text-white leading-relaxed">
+                    <p class="flex items-center gap-3"><span class="text-primary text-xl">⚡</span> We are a dedicated clan of adventure seekers.</p>
+                    <p class="flex items-center gap-3"><span class="text-primary text-xl">🤝</span> Our focus is building true brotherhood on the road.</p>
+                    <p class="flex items-center gap-3"><span class="text-primary text-xl">🛡️</span> We live by the pillars of Safety, Discipline, and Responsibility.</p>
+                    <p class="flex items-center gap-3"><span class="text-primary text-xl">🔥</span> Our motto: Ride with Freedom & Wisdom.</p>
+                    <p class="flex items-center gap-3"><span class="text-primary text-xl">🌍</span> Riding all over India with no fixed area.</p>
+                </div>
+                <div class="mt-8 p-6 text-white bg-white/5 rounded-2xl border-l-4 border-primary italic">
+                    "It's not just about the destination, it's about the brothers you ride with and the wisdom you gain along the way."
+                </div>
+            </div>
+            <div class="relative" data-aos="fade-left">
+                <img src="./assets/himalayan_bikes.png" alt="Buddies Unleashed riders" class="rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 border border-white/10">
+                <div class="absolute -top-6 -left-6 bg-primary p-6 rounded-2xl hidden md:block">
+                    <img src="./LOGO 1.jpeg" alt="Buddies Unleashed club badge" class="h-16 rounded-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ride Routes Section -->
+    <section id="ride-routes" class="py-24 px-6 md:px-12 bg-secondary/50">
+        <div class="container mx-auto text-center mb-16">
+            <h3 class="text-primary font-header text-2xl tracking-widest mb-4">THE ROAD AHEAD</h3>
+            <h2 class="font-header text-white text-5xl md:text-6xl uppercase">Ride <span class="text-primary">Routes</span></h2>
+            <p class="max-w-3xl mx-auto text-white text-lg mt-8 leading-relaxed">
+                We ride across Bangalore and South India, exploring scenic routes and creating unforgettable riding experiences. There’s no fixed schedule—reach out to join our next ride and stay connected with our community for the latest updates, destinations, and adventures.
+            </p>
+            <div class="max-w-4xl mx-auto text-left text-white mt-10 space-y-5 leading-relaxed">
+                <p>Buddies Unleashed is a motorcycle riding community for people who value safe group riding, route discipline, and continuous learning on the road. We have riders from across India, united by a passion for exploring new routes and building a strong riding culture. Every ride is planned with careful consideration of weather conditions, road safety, rider comfort, and established riding protocols. We believe every journey is a team effort, where experienced riders support newer members in developing confidence in lane positioning, braking techniques, formation riding, and effective communication on the road.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section id="team" class="py-24 px-6 md:px-12 bg-secondary/30 border-y border-white/5">
+        <div class="container mx-auto">
+            <div class="text-center mb-14">
+                <h3 class="text-primary font-header text-2xl tracking-widest mb-4">THE CORE CREW</h3>
+                <h2 class="font-header text-white text-5xl md:text-6xl uppercase">Our <span class="text-primary">Team</span></h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article class="bg-white/5 rounded-2xl border border-white/10 overflow-hidden" data-aos="fade-up">
+                    <img src="./New folder of Bikers/Suriya.jpeg" alt="Surya" class="w-full h-72 object-cover">
+                    <div class="p-5 text-center">
+                        <p class="font-header text-white text-3xl tracking-wide">Surya</p>
+                        <p class="text-white text-sm uppercase tracking-widest mt-2">Founder</p>
+                    </div>
+                </article>
+                <article class="bg-white/5 rounded-2xl border border-white/10 overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./New folder of Bikers/Heartkannan.jpeg" alt="Heartkannan" class="w-full h-72 object-cover" style="object-position: center 20%;">
+                    <div class="p-5 text-center">
+                        <p class="font-header text-white text-3xl tracking-wide">Heartkannan</p>
+                        <p class="text-white text-sm uppercase tracking-widest mt-2">Co Founder</p>
+                    </div>
+                </article>
+                <article class="bg-white/5 rounded-2xl border border-white/10 overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <img src="./New folder of Bikers/Adnan Sait.jpeg" alt="Adnan Sait" class="w-full h-72 object-cover">
+                    <div class="p-5 text-center">
+                        <p class="font-header text-white text-3xl tracking-wide">Adnan Sait</p>
+                        <p class="text-white text-sm uppercase tracking-widest mt-2">Co Founder</p>
+                    </div>
+                </article>
+                <article class="bg-white/5 rounded-2xl border border-white/10 overflow-hidden" data-aos="fade-up">
+                    <img src="./New folder of Bikers/Nobitaa.jpeg" alt="Nobitaa" class="w-full h-72 object-cover">
+                    <div class="p-5 text-center">
+                        <p class="font-header text-white text-3xl tracking-wide">Nobitaa</p>
+                        <p class="text-white text-sm uppercase tracking-widest mt-2">Co Founder</p>
+                    </div>
+                </article>
+                <article class="bg-white/5 rounded-2xl border border-white/10 overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./New folder of Bikers/Pushpak Raj.jpeg" alt="Pushpak Raj" class="w-full h-72 object-cover" style="object-position: center 18%;">
+                    <div class="p-5 text-center">
+                        <p class="font-header text-white text-3xl tracking-wide">Pushpak Raj</p>
+                        <p class="text-white text-sm uppercase tracking-widest mt-2">Co Founder</p>
+                    </div>
+                </article>
+                <article class="bg-white/5 rounded-2xl border border-white/10 overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <img src="./New folder of Bikers/Suresh.jpeg" alt="Suresh" class="w-full h-72 object-cover" style="object-position: center 22%;">
+                    <div class="p-5 text-center">
+                        <p class="font-header text-white text-3xl tracking-wide">Suresh</p>
+                        <p class="text-white text-sm uppercase tracking-widest mt-2">Co Founder</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="rides" class="py-20 bg-gradient-to-b from-dark to-secondary/30 border-y border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12">
+                <div class="text-center p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-primary/50 transition-all duration-300 group" data-aos="fade-up">
+                    <div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center text-primary text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <span class="block font-header text-5xl md:text-6xl text-white mb-2 text-glow" data-target="1">1</span>
+                    <span class="block text-primary font-header text-xl tracking-wider uppercase mb-1">Year Completed</span>
+                    <span class="text-white text-xs">Of epic memories on the open road</span>
+                </div>
+                <div id="ridesCompletedBox" class="text-center p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-primary/50 transition-all duration-300 group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center text-primary text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
+                    <span class="block font-header text-5xl md:text-6xl text-white mb-2 text-glow" data-target="23">23</span>
+                    <span class="block text-primary font-header text-xl tracking-wider uppercase mb-1">Rides Completed</span>
+                    <span class="text-white text-xs">Across challenging terrains & routes</span>
+                </div>
+                <div class="text-center p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-primary/50 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center text-primary text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="flex justify-center items-center gap-1 mb-2">
+                        <span class="font-header text-5xl md:text-6xl text-white text-glow" data-target="100">100</span>
+                        <span class="font-header text-4xl md:text-5xl text-primary">+</span>
+                    </div>
+                    <span class="block text-primary font-header text-xl tracking-wider uppercase mb-1">Riders in Club</span>
+                    <span class="text-white text-xs">A growing, passionate family</span>
+                </div>
+                <div class="text-center p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-primary/50 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center text-primary text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <span class="block font-header text-3xl md:text-4xl text-white mb-2 tracking-wide uppercase py-2">ABC INDIA</span>
+                    <span class="block text-primary font-header text-xl tracking-wider uppercase mb-1">REGISTERED</span>
+                    <span class="text-white text-xs">Officially recognized adventure clan</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section id="rules" class="py-24 px-6 md:px-12 bg-dark border-y border-white/5">
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center mb-16">
+                <h3 class="text-primary font-header text-2xl tracking-widest mb-4">DISCIPLINE ON THE ROAD</h3>
+                <h2 class="font-header text-white text-5xl md:text-6xl uppercase">Rules & <span class="text-primary">Regulations</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white/5 p-8 rounded-2xl shadow-lg border border-white/10" data-aos="fade-up">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xl mb-6">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h4 class="font-header text-2xl text-white mb-3 tracking-wide">Safety Gear is Mandatory</h4>
+                    <p class="text-white leading-relaxed">Helmets are non-negotiable for both rider and pillion. Riding jackets, gloves, and proper shoes are strongly advised on all long rides.</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-2xl shadow-lg border border-white/10" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xl mb-6">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h4 class="font-header text-2xl text-white mb-3 tracking-wide">Valid Documents</h4>
+                    <p class="text-white leading-relaxed">Every rider must carry a valid driving license, RC, insurance, and pollution certificate at all times during the expedition.</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-2xl shadow-lg border border-white/10" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xl mb-6">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h4 class="font-header text-2xl text-white mb-3 tracking-wide">Lane Discipline</h4>
+                    <p class="text-white leading-relaxed">No reckless overtaking, zigzag riding, or speeding. We ride in formation and respect the pace set by the lead rider.</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-2xl shadow-lg border border-white/10" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xl mb-6">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4 class="font-header text-2xl text-white mb-3 tracking-wide">Brotherhood First</h4>
+                    <p class="text-white leading-relaxed">Respect all members. In case of a breakdown or emergency, the clan stays together. No rider is left behind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-dark overflow-hidden">
+        <div class="container mx-auto px-6 text-center mb-16">
+            <h3 class="text-primary font-header text-2xl tracking-widest mb-4">CLAN MEMORIES</h3>
+            <h2 class="font-header text-white text-5xl md:text-6xl uppercase">The <span class="text-primary">Expedition Log</span></h2>
+        </div>
+        
+        <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4 max-w-7xl mx-auto">
+            <!-- Dynamic elements will be inserted here by js/script.js -->
+        </div>
+
+        <div class="text-center mt-12">
+            <button id="loadMoreBtn" class="border border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-full font-header text-xl tracking-widest transition-all hover:scale-105 active:scale-95 duration-300">
+                EXPLORE ALL LOGS
+            </button>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-4 md:px-12 bg-dark">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col lg:flex-row bg-white/5 rounded-3xl overflow-hidden border border-white/10 shadow-2xl" data-aos="fade-up">
+                
+                <!-- Image Side -->
+                <div class="lg:w-1/2 min-h-[400px] relative bg-[url('./assets/hero.png')] bg-cover bg-center">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent flex flex-col justify-end p-8 md:p-12">
+                        <i class="fas fa-motorcycle text-6xl text-primary mb-4"></i>
+                        <h3 class="font-header text-4xl text-white leading-none mb-2">NEVER RIDE <span class="text-primary">ALONE</span></h3>
+                        <p class="text-white font-light">"Four wheels move the body, two wheels move the soul. Join the ultimate brotherhood on the road."</p>
+                    </div>
+                </div>
+
+                <!-- Contact Details Side -->
+                <div class="lg:w-1/2 p-6 md:p-12 lg:p-16 flex flex-col justify-center">
+                    <div class="text-center mb-8 md:mb-10">
+                        <img src="./LOGO 1.jpeg" alt="Buddies Unleashed Logo" class="h-24 md:h-32 mx-auto mb-6 rounded-full shadow-[0_0_20px_rgba(230,30,38,0.4)] object-contain border border-primary/20">
+                        <h2 class="font-header text-4xl md:text-5xl uppercase text-white">Reach Out to <span class="text-primary">Us</span></h2>
+                    </div>
+
+                    <div class="space-y-6 md:space-y-8">
+                        <div class="flex items-center gap-4 md:gap-6 group">
+                            <div class="w-12 h-12 md:w-14 md:h-14 bg-white/5 rounded-full flex shrink-0 items-center justify-center text-primary text-xl group-hover:bg-primary group-hover:text-white transition-all shadow-glow">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="overflow-hidden min-w-0 w-full">
+                                <p class="text-white text-xs uppercase font-bold tracking-widest mb-1">Follow the Journey</p>
+                                <a href="https://instagram.com/buddies.unleashed.advclan" target="_blank" class="text-sm md:text-lg text-white font-medium hover:text-primary transition-colors break-words block">@buddies.unleashed.advclan</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-4 md:gap-6 group">
+                            <div class="w-12 h-12 md:w-14 md:h-14 bg-white/5 rounded-full flex shrink-0 items-center justify-center text-primary text-xl group-hover:bg-primary group-hover:text-white transition-all shadow-glow">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="overflow-hidden min-w-0 w-full">
+                                <p class="text-white text-xs uppercase font-bold tracking-widest mb-1">Email Inquiries</p>
+                                <a href="mailto:contact@buddiesunleashed.com" class="text-sm md:text-lg text-white font-medium hover:text-primary transition-colors break-all block">contact@buddiesunleashed.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-4 md:gap-6 group">
+                            <div class="w-12 h-12 md:w-14 md:h-14 bg-white/5 rounded-full flex shrink-0 items-center justify-center text-primary text-xl group-hover:bg-primary group-hover:text-white transition-all shadow-glow">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="overflow-hidden min-w-0 w-full">
+                                <p class="text-white text-xs uppercase font-bold tracking-widest mb-1">Direct WhatsApp</p>
+                                <p class="text-sm md:text-lg text-white font-medium break-words">
+                                    <span class="font-bold text-white">Heart Kannan</span><br class="md:hidden"> – +91 90368 07752
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 mt-8 border-t border-white/10">
+                            <a href="https://chat.whatsapp.com/JfW5sSOwyYUITVMpOTiBcI?s=cl&p=i&mlu=1" target="_blank" class="w-full btn-primary py-4 px-2 rounded-lg font-header text-xl md:text-2xl tracking-widest flex items-center justify-center gap-2 md:gap-3 text-white text-center break-words shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]">
+                                <i class="fab fa-whatsapp text-2xl md:text-3xl"></i> JOIN THE CLAN
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 text-center bg-dark">
+        <img src="./LOGO 1.jpeg" alt="Footer Logo" class="h-20 mx-auto mb-6 rounded-full object-contain border border-white/10">
+        <p class="text-white text-sm tracking-widest font-bold">&copy; 2026 BUDDIES UNLEASHED ADVCLAN. ALL RIGHTS RESERVED.</p>
+        <p class="mt-4 font-header text-primary tracking-widest text-xl">RIDE WITH FREEDOM & WISDOM</p>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <!-- Phone Button (Left) -->
+    <a href="tel:+919036807752" class="fixed bottom-4 left-4 md:bottom-6 md:left-6 w-14 h-14 md:w-16 md:h-16 bg-green-500 text-white rounded-full flex items-center justify-center text-2xl md:text-3xl shadow-[0_4px_14px_0_rgba(34,197,94,0.5)] hover:scale-110 transition-transform duration-300 z-[90]" aria-label="Call Us">
+        <i class="fas fa-phone"></i>
+    </a>
+    <!-- WhatsApp Button (Right) -->
+    <a href="https://wa.me/919036807752?text=Hii%20I%20am%20Intrested" target="_blank" class="fixed bottom-4 right-4 md:bottom-6 md:right-6 w-14 h-14 md:w-16 md:h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center text-2xl md:text-3xl shadow-[0_4px_14px_0_rgba(37,211,102,0.5)] hover:scale-110 transition-transform duration-300 z-[90]" aria-label="Join our WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="fixed inset-0 bg-black/95 z-[100] hidden flex-col justify-center items-center backdrop-blur-sm">
+        <button id="lightboxClose" class="absolute top-6 right-6 text-white hover:text-white text-4xl transition-colors">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="relative w-full max-w-5xl px-4 flex items-center justify-center">
+            <button id="lightboxPrev" class="absolute left-6 text-white hover:text-white text-5xl transition-colors hidden md:block"><i class="fas fa-chevron-left"></i></button>
+            <button id="lightboxNext" class="absolute right-6 text-white hover:text-white text-5xl transition-colors hidden md:block"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="max-w-4xl max-h-[85vh] flex flex-col items-center justify-center">
+            <div id="lightboxMedia" class="rounded-xl overflow-hidden shadow-2xl relative"></div>
+            <p id="lightboxCaption" class="text-white text-sm mt-4 tracking-widest uppercase"></p>
+        </div>
+    </div>
+
+    <!-- Visited Places Modal -->
+    <div id="visitedPlacesModal" class="fixed inset-0 bg-black/95 z-[100] hidden flex-col items-center backdrop-blur-sm overflow-y-auto py-12">
+        <button id="visitedPlacesClose" class="absolute top-6 right-6 text-white hover:text-primary text-4xl transition-colors z-[110]">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="container mx-auto px-6 max-w-6xl mt-8">
+            <h2 class="font-header text-white text-4xl md:text-6xl text-center mb-12 uppercase text-glow">Places <span class="text-primary">Visited</span></h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="visitedPlacesGrid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Event Registration Modal -->
+    <div id="eventModal" class="fixed inset-0 bg-black/95 z-[100] hidden flex-col justify-center items-center backdrop-blur-sm px-4">
+        <div class="bg-dark border border-primary/30 rounded-3xl p-8 max-w-md w-full shadow-[0_0_30px_rgba(230,30,38,0.2)] relative" data-aos="zoom-in" data-aos-duration="300">
+            <button id="eventModalClose" class="absolute top-4 right-4 text-white hover:text-primary text-2xl transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center text-primary text-3xl mb-4">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h3 id="eventModalTitle" class="font-header text-3xl text-white uppercase tracking-widest mb-2">Event Name</h3>
+                <p class="text-gray-400 text-sm">Join the Adventure Clan for our next ride!</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-4 mb-6 border border-white/10 text-center">
+                <p class="text-white text-sm uppercase tracking-widest mb-1 opacity-70">Last Date to Register</p>
+                <p id="eventModalDate" class="font-header text-2xl text-primary tracking-wider">DD.MM.YYYY</p>
+            </div>
+            <a href="https://wa.me/919036807752?text=Hii%20I%20am%20Intrested" target="_blank" class="btn-primary w-full px-6 py-4 rounded-full font-header text-xl tracking-widest text-center text-white flex items-center justify-center gap-3 hover:scale-105 transition-transform duration-300">
+                <i class="fab fa-whatsapp text-2xl"></i> PROCEED TO WHATSAPP
+            </a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/gallery-data.js?v=2"></script>
+    <script src="./js/script.js?v=2"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true, easing: 'ease-out-back' });
+
+        const eventModal = document.getElementById('eventModal');
+        const eventModalClose = document.getElementById('eventModalClose');
+        const eventModalTitle = document.getElementById('eventModalTitle');
+        const eventModalDate = document.getElementById('eventModalDate');
+
+        function openEventModal(title, date) {
+            eventModalTitle.textContent = title;
+            eventModalDate.textContent = date;
+            eventModal.classList.remove('hidden');
+            eventModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        if (eventModalClose) {
+            eventModalClose.addEventListener('click', () => {
+                eventModal.classList.add('hidden');
+                eventModal.classList.remove('flex');
+                document.body.style.overflow = '';
+            });
+        }
+
+        if (eventModal) {
+            eventModal.addEventListener('click', (e) => {
+                if (e.target === eventModal) {
+                    eventModal.classList.add('hidden');
+                    eventModal.classList.remove('flex');
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
