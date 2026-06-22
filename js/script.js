@@ -307,7 +307,8 @@ const visitedPlaces = [
     { name: "Vathalmalai", file: "Vathalmalai.jpeg" },
     { name: "WMD 2025", file: "WMD 2025.jpeg" },
     { name: "Kothur Lake", file: "kothur lake .jpeg" },
-    { name: "Ayyur Forest", file: "Ayyur Forest.jpeg" }
+    { name: "Ayyur Forest", file: "Ayyur Forest.jpeg" },
+    { name: "Mallapa Hills", file: "Mallapa Hills .jpeg" }
 ];
 
 const renderVisitedPlaces = () => {
