@@ -294,6 +294,7 @@ const visitedPlacesClose = document.getElementById('visitedPlacesClose');
 const visitedPlacesGrid = document.getElementById('visitedPlacesGrid');
 
 const visitedPlaces = [
+    { name: "Manchanabele Dam", file: "Manchanabele Dam.jpeg" },
     { name: "Balmuri Falls", file: "Balmuri Falls.jpeg" },
     { name: "Coorg", file: "Coorge.jpeg" },
     { name: "DD Hills", file: "DD Hills .jpeg" },

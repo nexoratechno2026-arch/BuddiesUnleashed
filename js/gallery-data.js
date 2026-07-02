@@ -1,4 +1,5 @@
 const GALLERY_ASSETS = [
+    { name: 'Manchanabele Dam.mp4', type: 'video', label: 'Expedition Log', path: 'assets/bikers' },
     { name: 'IMG_1117.MOV', type: 'video', label: 'Expedition Log', path: 'assets/bikers' },
     { name: 'IMG_0444.jpg', type: 'image', label: 'Expedition Log', path: 'assets/bikers' },
     { name: 'IMG_0551.jpg', type: 'image', label: 'Expedition Log', path: 'assets/bikers' },
